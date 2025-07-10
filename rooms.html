@@ -1,27 +1,55 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Keyla's Boarding Space</title>
 
-  <!-- ✅ Bootstrap CSS CDN -->
+  <!-- Bootstrap & Font Awesome -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Your Custom CSS -->
+  <!-- Your Custom Styles -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-   <header class="bg-success text-white p-4 text-center">
-  <h1>Keyla's Boarding Space</h1>
-  <nav class="mt-3">
-    <a href="index.html" class="btn btn-light me-2">Home</a>
-    <a href="about.html" class="btn btn-light me-2">About</a>
-    <a href="rooms.html" class="btn btn-light me-2">Rooms</a>
-    <a href="contact.html" class="btn btn-light">Contact</a>
-  </nav>
+
+<!-- Preloader (Optional) -->
+<div class="pace-overlay" style="display: none;"></div>
+
+<!-- Header -->
+<header class="bg-success text-white text-center py-5" style="background-image: url('images/room1.jpg'); background-size: cover; background-attachment: fixed;">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center flex-wrap">
+      <!-- Logo -->
+      <div>
+        <a href="index.html">
+          <img src="images/KSALogo.png" alt="Keyla Logo" style="max-height: 60px;" />
+        </a>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="mt-3 mt-sm-0">
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="rooms.html">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="about.html">Boarding House</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Menu Button (optional if you want to code JS menu toggle later) -->
+      <button class="btn btn-outline-light d-sm-none mt-2"><i class="fas fa-bars"></i></button>
+    </div>
+
+    <!-- Optional Welcome Text -->
+    <div class="mt-4">
+      <h1 class="display-5">Welcome to Keyla's Boarding Space</h1>
+      <p class="lead">Affordable, safe, and comfortable stay for students and professionals</p>
+    </div>
+  </div>
 </header>
+
     <main>
         <h2>Available Rooms</h2>
         <div class="gallery">
