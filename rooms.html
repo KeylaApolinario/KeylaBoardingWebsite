@@ -88,6 +88,41 @@
     color: #ffd700 !important; /* Gold hover effect */
   }
 </style>
+
+<style>
+  /* Sticky nav at top */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #198754;
+    padding: 0.3rem 0;
+  }
+
+  /* Style the nav links */
+  .nav-link {
+    font-weight: bold;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+  }
+
+  /* Hover effect (text only) */
+  .nav-link:hover {
+    color: #ffd700 !important; /* Gold hover */
+  }
+
+  /* Remove default background rectangles */
+  .nav-item {
+    background: none !important;
+  }
+
+  /* Prevent nav from pushing content under */
+  body {
+    scroll-padding-top: 60px;
+  }
+</style>
+  
 </head>
 <body>
 
@@ -126,6 +161,18 @@
     </div>
   </div>
 </header>
+
+  <!-- Sticky Nav Section -->
+<nav class="sticky-nav">
+  <div class="container">
+    <ul class="nav justify-content-center">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">Boarding House</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
    <main>
   <section class="container py-5">
