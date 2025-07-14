@@ -32,24 +32,35 @@
 </style>
 
 <style>
-  /* Shrunk header style */
-  .shrink {
-    padding: 0.3rem 0 !important;
-    background-color: #198754 !important; /* Optional solid color for clarity */
-    background-image: none !important;
+  /* Default header state */
+  #mainHeader {
+    padding: 4rem 0;
     transition: all 0.3s ease;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Shrunk state after scroll */
+  #mainHeader.shrink {
+    padding: 0.8rem 0 !important;
+    background-color: rgba(25, 135, 84, 0.95);
+    background-attachment: scroll !important;
   }
 
   /* Shrink logo */
-  .shrink img {
+  #mainHeader.shrink img {
     max-height: 40px !important;
   }
 
-  /* Shrink header text (optional: hide welcome text when scrolling) */
-  .header-welcome {
-    display: none;
+  /* Optional: shrink text */
+  #mainHeader.shrink h1 {
+    font-size: 1.5rem;
   }
-</style>  
+
+  #mainHeader.shrink p {
+    font-size: 0.95rem;
+  }
+</style>
 </head>
   
 <body>
