@@ -11,6 +11,30 @@
 
   <!-- Your Custom Styles -->
   <link rel="stylesheet" href="css/style.css" />
+  
+  <style>
+  /* Make nav links bold */
+  .nav-link {
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+
+  /* Hover effect */
+  .nav-link:hover {
+    color: #ffffff !important;
+    background-color: #218838;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+
+  /* Optional: active page highlight */
+  .nav-link.active {
+    background-color: #198754;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+</style>
 </head>
 <body>
 
@@ -31,10 +55,10 @@
       <!-- Navigation -->
       <nav class="mt-3 mt-sm-0">
         <ul class="nav">
-          <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="rooms.html">Rooms</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="about.html">Boarding House</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="rooms.html">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="about.html">Boarding House</a></li>
+          <li class="nav-item"><a class="nav-link text-white active" href="contact.html">Contact</a></li>
         </ul>
       </nav>
 
