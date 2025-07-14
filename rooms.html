@@ -150,13 +150,15 @@
         <p>&copy; 2025 Keyshace's Boarding Space. All rights reserved.</p>
     </footer>
 
-  <script>
-  window.addEventListener("scroll", function () {
-    const header = document.getElementById("mainHeader");
-    if (window.scrollY > 80) {
-      header.classList.add("shrink");
+<script>
+  const ribbon = document.getElementById("stickyRibbon");
+  const headerHeight = document.querySelector("header").offsetHeight;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > headerHeight) {
+      ribbon.classList.remove("d-none");
     } else {
-      header.classList.remove("shrink");
+      ribbon.classList.add("d-none");
     }
   });
 </script>
