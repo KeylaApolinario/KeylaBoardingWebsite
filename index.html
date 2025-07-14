@@ -30,6 +30,26 @@
     color: #ffc107 !important; /* Slightly different color to indicate active */
   }
 </style>
+
+<style>
+  /* Shrunk header style */
+  .shrink {
+    padding: 0.3rem 0 !important;
+    background-color: #198754 !important; /* Optional solid color for clarity */
+    background-image: none !important;
+    transition: all 0.3s ease;
+  }
+
+  /* Shrink logo */
+  .shrink img {
+    max-height: 40px !important;
+  }
+
+  /* Shrink header text (optional: hide welcome text when scrolling) */
+  .header-welcome {
+    display: none;
+  }
+</style>  
 </head>
   
 <body>
@@ -38,7 +58,7 @@
 <div class="pace-overlay" style="display: none;"></div>
 
 <!-- Header -->
-<header class="bg-success text-white text-center py-5" style="background-image: url('images/image6.png'); background-size: cover; background-attachment: fixed;">
+<header id="mainHeader" class="bg-success text-white text-center py-5" style="background-image: url('images/image6.png'); background-size: cover; background-attachment: fixed;">
   <div class="container">
     <div class="d-flex justify-content-between align-items-center flex-wrap">
       <!-- Logo -->
@@ -63,7 +83,7 @@
     </div>
 
     <!-- Optional Welcome Text -->
-    <div class="mt-4">
+  <div class="mt-4 header-welcome">
       <h1 class="display-5">Welcome to Keyla's Boarding Space</h1>
       <p class="lead">Affordable, safe, and comfortable stay for students and professionals</p>
     </div>
@@ -119,5 +139,15 @@
     <p>&copy; 2025 Keyla’s Boarding Space. All rights reserved.</p>
   </footer>
 
+  <script>
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("mainHeader");
+    if (window.scrollY > 80) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+  });
+</script>  
 </body>
 </html>
