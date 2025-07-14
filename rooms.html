@@ -62,6 +62,32 @@
   }
 </style>
 
+<style>
+  /* Sticky nav only */
+  nav.sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #198754; /* Match your green theme */
+    padding: 0.5rem 1rem;
+  }
+
+  /* Optional: subtle shadow when scrolling */
+  nav.sticky-nav.scrolled {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+
+  /* Keep nav links bold and styled */
+  .nav-link {
+    font-weight: bold;
+    color: white !important;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #ffd700 !important; /* Gold hover effect */
+  }
+</style>
 </head>
 <body>
 
@@ -80,7 +106,7 @@
       </div>
 
       <!-- Navigation -->
-      <nav class="mt-3 mt-sm-0">
+      <nav class="mt-3 mt-sm-0 sticky-nav">
         <ul class="nav">
           <li class="nav-item"><a class="nav-link text-white" href="index.html">HOME</a></li>
           <li class="nav-item"><a class="nav-link text-white" href="rooms.html">ROOMS</a></li>
@@ -158,6 +184,18 @@
     }
   });
 </script>
+
+<script>
+  const nav = document.querySelector('nav.sticky-nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+</script>
+  
 </body>
 </html>
 
