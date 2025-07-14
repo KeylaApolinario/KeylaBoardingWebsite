@@ -30,6 +30,27 @@
     color: #ffc107 !important; /* Slightly different color to indicate active */
   }
   </style>
+
+  <style>
+  /* Sticky ribbon nav styling */
+  #stickyRibbon {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #198754;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #stickyRibbon .nav-link {
+    font-weight: bold;
+    color: white !important;
+    transition: color 0.3s ease;
+  }
+
+  #stickyRibbon .nav-link:hover {
+    color: #ffd700 !important;
+  }
+</style>
   
 </head>
 <body>
