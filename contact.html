@@ -30,6 +30,28 @@
     color: #ffc107 !important; /* Slightly different color to indicate active */
   }
 </style>
+
+  <style>
+  /* Sticky ribbon nav styling */
+  #stickyRibbon {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #198754;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #stickyRibbon .nav-link {
+    font-weight: bold;
+    color: white !important;
+    transition: color 0.3s ease;
+  }
+
+  #stickyRibbon .nav-link:hover {
+    color: #ffd700 !important;
+  }
+</style>
+
 </head>
 <body>
 
@@ -69,6 +91,18 @@
   </div>
 </header>
 
+  <!-- Sticky Ribbon Nav (initially hidden) -->
+<nav id="stickyRibbon" class="bg-success d-none">
+  <div class="container">
+    <ul class="nav justify-content-end py-2 m-0">
+      <li class="nav-item"><a class="nav-link text-white fw-bold" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-white fw-bold" href="rooms.html">Rooms</a></li>
+      <li class="nav-item"><a class="nav-link text-white fw-bold" href="about.html">Boarding House</a></li>
+      <li class="nav-item"><a class="nav-link text-white fw-bold" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
     <main>
         <section>
             <h2>We'd love to hear from you!</h2>
@@ -104,5 +138,19 @@
     <footer>
         <p>&copy; 2025 Keyshace's Boarding Space. All rights reserved.</p>
     </footer>
+
+  <script>
+  const ribbon = document.getElementById("stickyRibbon");
+  const headerHeight = document.querySelector("header").offsetHeight;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > headerHeight) {
+      ribbon.classList.remove("d-none");
+    } else {
+      ribbon.classList.add("d-none");
+    }
+  });
+</script>
+  
 </body>
 </html>
