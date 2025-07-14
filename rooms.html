@@ -32,44 +32,43 @@
   </style>
 
  <style>
-  /* Default header state */
-  #mainHeader {
-    padding: 4rem 0;
-    transition: all 0.3s ease;
-    background-size: cover;
-    background-position: center;
+  /* Sticky navbar */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #198754;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
 
-  /* Shrunk state after scroll */
-  #mainHeader.shrink {
-    padding: 0.8rem 0 !important;
-    background-color: rgba(25, 135, 84, 0.95);
-    background-attachment: scroll !important;
+  /* Nav links style */
+  .sticky-nav .nav-link,
+  .nav-wrapper .nav-link {
+    color: white !important;
+    font-weight: bold;
+    transition: color 0.3s ease;
   }
 
-  /* Shrink logo */
-  #mainHeader.shrink img {
-    max-height: 40px !important;
+  .sticky-nav .nav-link:hover,
+  .nav-wrapper .nav-link:hover {
+    color: #ffd700 !important;
   }
 
-  /* Optional: shrink text */
-  #mainHeader.shrink h1 {
-    font-size: 1.5rem;
-  }
-
-  #mainHeader.shrink p {
-    font-size: 0.95rem;
+  /* Remove default margin from nav items */
+  .nav-item {
+    margin: 0 0.5rem;
   }
 </style>
+  
 </head>
 <body>
 
 <!-- Preloader (Optional) -->
 <div class="pace-overlay" style="display: none;"></div>
 
-<!-- Header -->
-<header id="mainHeader" class="bg-success text-white text-center py-5" style="background-image: url('images/image6.png'); background-size: cover; background-attachment: fixed;">
-  <div class="container">
+<!-- HEADER SECTION -->
+<header class="bg-success text-white text-center" style="background-image: url('images/image6.png'); background-size: cover; background-attachment: fixed;">
+  <div class="container py-4">
     <div class="d-flex justify-content-between align-items-center flex-wrap">
       <!-- Logo -->
       <div>
@@ -78,27 +77,36 @@
         </a>
       </div>
 
-      <!-- Navigation -->
-      <nav class="mt-3 mt-sm-0">
-        <ul class="nav">
-          <li class="nav-item"><a class="nav-link text-white" href="index.html">HOME</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="rooms.html">OUR ROOMS</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="about.html">ABOUT US</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="contact.html">CONTACT US</a></li>
+      <!-- Nav (top right) -->
+      <div class="nav-wrapper">
+        <ul class="nav justify-content-end">
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="rooms.html">Rooms</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="about.html">Boarding House</a></li>
+          <li class="nav-item"><a class="nav-link text-white fw-bold" href="contact.html">Contact</a></li>
         </ul>
-      </nav>
-
-      <!-- Mobile Menu Button (optional if you want to code JS menu toggle later) -->
-      <button class="btn btn-outline-light d-sm-none mt-2"><i class="fas fa-bars"></i></button>
+      </div>
     </div>
 
-    <!-- Optional Welcome Text -->
-  <div class="mt-4 header-welcome">
+    <!-- Welcome Message -->
+    <div class="mt-4">
       <h1 class="display-5">Welcome to Keyla's Boarding Space</h1>
       <p class="lead">Affordable, safe, and comfortable stay for students and professionals</p>
     </div>
   </div>
 </header>
+
+<!-- STICKY NAV BAR CLONE -->
+<div class="sticky-nav bg-success">
+  <div class="container">
+    <ul class="nav justify-content-end py-2 m-0">
+      <li class="nav-item"><a class="nav-link text-white fw-bold" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-white fw-bold" href="rooms.html">Rooms</a></li>
+      <li class="nav-item"><a class="nav-link text-white fw-bold" href="about.html">Boarding House</a></li>
+      <li class="nav-item"><a class="nav-link text-white fw-bold" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</div>
 
       <!-- Mobile Menu Button (optional if you want to code JS menu toggle later) -->
       <button class="btn btn-outline-light d-sm-none mt-2"><i class="fas fa-bars"></i></button>
