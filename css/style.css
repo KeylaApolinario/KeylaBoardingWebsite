@@ -163,15 +163,4 @@ img {
   display: block;
 }
 
-/* Resize the whole carousel container */
-#roomCarousel {
-  max-width: 100px;   
-  height: 50px;   
-  margin: 0 auto;      
-  overflow: hidden;   
-  border-radius: 12px; 
-}
-
-
-
 }
