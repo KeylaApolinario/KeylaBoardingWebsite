@@ -154,7 +154,7 @@ button {
    .carousel-item img {
   height: 50px;         
   width: 100%;           
-  object-fit: cover;     
+  object-fit: none;     
   border-radius: 12px;   
 }
 
