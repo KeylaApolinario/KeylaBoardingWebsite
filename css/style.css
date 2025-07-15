@@ -153,7 +153,7 @@ button {
 
    .carousel-item img {
   height: 50px;         
-  width: 100%;           
+  width: 70%;           
   object-fit: none;     
   border-radius: 12px;   
 }
