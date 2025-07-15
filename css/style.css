@@ -152,9 +152,10 @@ img {
 }
 
 .carousel-item img {
-  height: 50px;         
-  width: 70%;           
-  object-fit;     
-  border-radius: 12px;   
+  height: 400px !important;
+  width: 100% !important;
+  object-fit: cover !important;
+  display: block;
 }
+
 }
