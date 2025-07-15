@@ -154,7 +154,7 @@ img {
 .carousel-item img {
   height: 50px;         
   width: 70%;           
-  object-fit: contain;     
+  object-fit;     
   border-radius: 12px;   
 }
 }
