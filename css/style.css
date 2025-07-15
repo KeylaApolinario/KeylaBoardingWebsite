@@ -146,17 +146,15 @@ button {
 }
 
 
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-   .carousel-item img {
-  height: 50px;         
-  width: 70%;           
-  object-fit: none;     
-  border-radius: 12px;   
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-
+.carousel-item img {
+  height: 50px;         
+  width: 70%;           
+  object-fit: contain;     
+  border-radius: 12px;   
+}
 }
