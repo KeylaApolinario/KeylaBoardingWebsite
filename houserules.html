@@ -11,17 +11,29 @@
 </head>
 <body>
 
-<header class="bg-success text-white p-3">
-  <div class="container d-flex align-items-center justify-content-start">
-    <!-- Back Arrow -->
-    <a href="javascript:history.back()" style="color: white; font-size: 1.5rem; margin-right: 15px;">
-      <i class="fas fa-arrow-left"></i>
-    </a>
+<header class="bg-success text-white py-3">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Back Arrow on the Left -->
+      <div class="col-auto">
+        <a href="javascript:history.back()" style="color: white; font-size: 1.5rem;">
+          <i class="fas fa-arrow-left"></i>
+        </a>
+      </div>
 
-    <!-- Page Title -->
-    <h1 class="m-0 fs-4">House Rules</h1>
+      <!-- Centered Title -->
+      <div class="col text-center">
+        <h1 class="m-0 fs-5">House Rules</h1> <!-- fs-5 = standard font size -->
+      </div>
+
+      <!-- Spacer column to balance layout -->
+      <div class="col-auto d-none d-md-block" style="visibility: hidden;">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+    </div>
   </div>
 </header>
+
 
 
 <div class="mb-4 d-flex justify-content-center">
